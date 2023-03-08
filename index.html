@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./static/styles.css">
+      </head>
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block" style="display:none;z-index:5" id="mySidebar">
+    <button class="w3-bar-item w3-button" onclick="w3_close()">Close</button>
+    <a href="portfolio.html" class="w3-bar-item w3-button">Portfolio</a>
+    <a href="data_science.html" class="w3-bar-item w3-button">Data Science</a>
+    <a href="resources.html" class="w3-bar-item w3-button">Resources</a>
+  </div>
+  
+  <!-- Overlay -->
+  <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+  
+  
+  <!-- Page content -->
+  <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+   
+    <p id="myname"></p>
+
+  </div>
+
+  
+  <!-- JS to open and close sidebar with overlay effect -->
+  <script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+
+</script>
+<script type="text/javascript" src="./static/main.js"></script>
+</html>
