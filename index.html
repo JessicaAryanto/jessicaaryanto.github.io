@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="./static/styles.css">
+      <link rel="stylesheet" href="static/styles.css">
       </head>
+
 <!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block" style="display:none;z-index:5" id="mySidebar">
     <button class="w3-bar-item w3-button" onclick="w3_close()">Close</button>
@@ -12,31 +13,29 @@
   </div>
   
   <!-- Overlay -->
-  <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+  <div class="w3-overlay" onclick="close_tab()" style="cursor:pointer" id="myOverlay"></div>
 
   
   
   <!-- Page content -->
-  <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
-  <div class="w3-container">
-   
-    <p id="myname"></p>
-
-  </div>
+    <button class="tab_bar_button" onclick="open_tab()">&#9776;</button>
+    <div class="contain-name">
+      <h1>Jessica Carlyne Aryanto</h1>
+    </div>
 
   
   <!-- JS to open and close sidebar with overlay effect -->
   <script>
-  function w3_open() {
+  function open_tab() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
   }
   
-  function w3_close() {
+  function close_tab() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
   }
 
 </script>
-<script type="text/javascript" src="./static/main.js"></script>
+
 </html>
