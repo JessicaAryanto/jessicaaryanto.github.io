@@ -1,42 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <link rel="stylesheet" href="static/styles.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/stars-css.css">
       </head>
 
-<!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block" style="display:none;z-index:5" id="mySidebar">
-    <button class="w3-bar-item w3-button" onclick="w3_close()">Close</button>
-    <a href="portfolio.html" class="w3-bar-item w3-button">Portfolio</a>
-    <a href="data_science.html" class="w3-bar-item w3-button">Data Science</a>
-    <a href="resources.html" class="w3-bar-item w3-button">Resources</a>
-  </div>
-  
-  <!-- Overlay -->
-  <div class="w3-overlay" onclick="close_tab()" style="cursor:pointer" id="myOverlay"></div>
+  <!-- JS to open and close sidebar with overlay effect -->
+<!-- The overlay -->
+<div id="myNav" class="overlay">
 
-  
-  
-  <!-- Page content -->
-    <button class="tab_bar_button" onclick="open_tab()">&#9776;</button>
-    
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="index.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="data_science.html">Data Science</a>
+    <a href="resources.html">Resources</a>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<div class="tab_button">
+  <span class="ham-menu" onclick="openNav()"></span>
+</div>
+
     <div class="contain-name">
-      <h1>Jessica Carlyne Aryanto</h1>
+      <h1 class="myName">Jessica Carlyne Aryanto</h1>
     </div>
 
-  
-  <!-- JS to open and close sidebar with overlay effect -->
-  <script>
-  function open_tab() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-  }
-  
-  function close_tab() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-  }
 
-</script>
+    <div class="stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </div>
+
+    <div class="first_block">
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+  
+
 
 </html>
