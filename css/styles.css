@@ -1,8 +1,29 @@
+.contain-name {
+    align-self: center;
+    font-size: 15px;
+}
+
 .myName {
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
     text-align: center;
     color: white;
+}
+
+.myDescription {
+    text-align: left;
+    color: white;
+}
+
+
+#cartoon {
+    position: absolute;
+    right: 0px;
+    bottom: 175px;
+    margin-right: 150px;
+}
+#cartoon img {
+    position: absolute;
 }
 
 .tab_button {
