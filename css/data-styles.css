@@ -1,0 +1,17 @@
+.all_projects {
+    /* border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                 -20px -20px 60px #ffffff;
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    margin: 20px;
+    color: grey; */
+    position:absolute;
+    width:70px;
+    float:right;
+    background-color:red;
+    height:40px;
+}
+
