@@ -1,0 +1,151 @@
+html, body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    overflow: auto;
+  }
+  
+  .nav_bar {
+    width: 100wh; 
+  }
+  
+  .main_container1 {
+    justify-self: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .resume_button {
+    float:right;
+    height: 15px;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    align-content: center;
+   }
+   
+   .resume_button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   .resume_button:hover {
+    color: #e8e8e8;
+   }
+   
+   .resume_button:hover::before {
+    width: 100%;
+   }
+  
+  .contain-name {
+      align-self: center;
+      font-size: 15px;
+  }
+  
+  .myName {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 50px;
+      text-align: center;
+      color: white;
+  }
+  
+  .myDescription {
+      text-align: left;
+      color: white;
+  }
+  
+  
+  #cartoon {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      margin-right: 20wh;
+      margin-bottom: 22.5vh;
+  }
+  #cartoon img {
+      position: absolute;
+  }
+  
+  
+  .ham-menu { display: inline-block; position: relative; margin-top: 40%; margin-left: 30px; cursor: pointer} /* margin = (width-height)/2 */
+  .ham-menu, .ham-menu::before, .ham-menu::after { width: 30px; height: 5px; border-radius: 7px; background-color: white; }
+  .ham-menu::before, .ham-menu::after { content: ""; display: block; position: absolute;}
+  .ham-menu::before { bottom: 130%; cursor: pointer} .ham-menu::after { top: 130%; cursor: pointer}
+  
+  /* The Overlay (background) */
+  .overlay {
+      /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+      height: 100%;
+      width: 0;
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      background-color: rgb(0,0,0); /* Black fallback color */
+      background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+      overflow-x: hidden; /* Disable horizontal scroll */
+      transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+    
+    /* Position the content inside the overlay */
+    .overlay-content {
+      position: relative;
+      top: 25%; /* 25% from the top */
+      width: 100%; /* 100% width */
+      text-align: center; /* Centered text/links */
+      margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    }
+    
+    /* The navigation links inside the overlay */
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block; /* Display block instead of inline */
+      transition: 0.3s; /* Transition effects on hover (color) */
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+    }
+    
+    /* Position the close button (top right corner) */
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+    
+    /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
