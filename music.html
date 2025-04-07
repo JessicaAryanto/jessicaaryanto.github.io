@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./resume.html">Resume</a></li>
+            <li><a href="./music.html">Music</a></li>
+        </ul>
+    </nav>
+
+    <div>
+  <h1>Music</h1>
+  <p>Some of my covers or casual jam sessions:</p>
+
+  <!-- Instrument placeholders -->
+  <div class="instrument" data-instrument="guitar">
+    <img src="images/guitar.png" alt="Guitar">
+  </div>
+  <div class="instrument" data-instrument="piano">
+    <img src="images/piano.png" alt="Piano">
+  </div>
+  <div class="instrument" data-instrument="violin">
+    <img src="images/violin.png" alt="Violin">
+  </div>
+  <div class="instrument" data-instrument="kalimba">
+    <img src="images/kalimba.png" alt="Kalimba">
+  </div>
+
+  <p>I apologise for the low quality of these recordings, they will be better.... maybe.. if I feel like it...</p>
+
+  <!-- Modal -->
+  <div id="musicModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title">Instrument Sounds</h2>
+      <div id="song-list">
+        <!-- Song buttons will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('musicModal');
+    const modalTitle = document.getElementById('modal-title');
+    const songList = document.getElementById('song-list');
+    const closeModal = document.querySelector('.close');
+
+    const instruments = {
+      guitar: ['jesus_strong_and_kind.m4a'],
+      piano: [],
+      violin: [],
+      kalimba: []
+    };
+
+    document.querySelectorAll('.instrument').forEach(instrument => {
+      instrument.addEventListener('click', () => {
+        const instrumentName = instrument.dataset.instrument;
+        modalTitle.textContent = `${instrumentName.charAt(0).toUpperCase() + instrumentName.slice(1)} Sounds`;
+        songList.innerHTML = '';
+
+        instruments[instrumentName].forEach(song => {
+          const button = document.createElement('button');
+          button.className = 'song-button';
+          button.textContent = song.replace('.m4a', '');
+          button.addEventListener('click', () => {
+            const audio = new Audio(`bgm/${instrumentName}/${song}`);
+            audio.play();
+          });
+          songList.appendChild(button);
+        });
+
+        modal.style.display = 'block';
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

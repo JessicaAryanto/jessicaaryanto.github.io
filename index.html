@@ -1,102 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <link rel="stylesheet" href="css/styles.css">
-      <link rel="stylesheet" href="css/stars-css.css">
-      </head>
+<head>
+  <link rel="stylesheet" href="css/index-styles.css">
+  <link rel="stylesheet" href="css/stars-css.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="jca">JCA</a>
+  </header>
 
-  <!-- JS to open and close sidebar with overlay effect -->
-<!-- The overlay -->
-<div id="myNav" class="overlay">
-
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a href="index.html">About</a>
-    <a href="resume.html">Resume</a>
-    <a href="art.html">Art</a>
-    <a href="music.html">Music</a>
-    <a href="ice_skating.html">Ice Skating</a>
-    <a href="animation.html">Animation</a>
+  <!-- Sidebar navigation menu -->
+  <div class="tab_button">
+    <span class="ham-menu" onclick="openNav()"></span>
   </div>
 
-</div>
-
-<!-- Use any element to open/show the overlay navigation menu -->
-
-<div class="tab_button">
-  <span class="ham-menu" onclick="openNav()"></span>
-</div>
-
-    <div class="contain-name">
-      <h1 class="myName">JCA</h1>
-
-      <pre class="myDescription">a DevOps Engineer in a Platform team. 
-        Interested in ice skating, music, art, animation and coding up cool stuff...</pre>
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="index.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="art.html">Art</a>
+      <a href="music.html">Music</a>
+      <a href="ice_skating.html">Ice Skating</a>
+      <a href="animation.html">Animation</a>
     </div>
+  </div>
 
+  <div class="contain-name">
+    <pre class="myDescription">a DevOps Engineer in a Platform team.</pre>
+  </div>
 
-    <div class="stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-    </div>
+  <div class="stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
 
-    <div id="cartoon">
-      <img src="images/cute_cat.webp" alt="" />
-    </div>
+  <script>
+    const sentences = [
+      "Needs 12 hours of sleep a day but we all know that's not possible.",
+      "Loves to learn new things and share knowledge with others.",
+      "Interested in a lot of things but not enough time to do them all.",
+      "Interested in ice skating, music, art, animation and coding up cool stuff...",
+      "Thanking God for the good and the bad.",
+    ];
+    document.querySelector('.myDescription').textContent = sentences[Math.floor(Math.random() * sentences.length)];
+  </script>
 
-
-
-
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
