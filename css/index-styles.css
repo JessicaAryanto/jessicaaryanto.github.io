@@ -163,3 +163,8 @@ body {
     min-height: 100vh;
     overflow: hidden;
 }
+
+pre {
+    white-space: pre-wrap; /* Enable wrapping for long lines */
+    word-wrap: break-word; /* Break words if necessary */
+}
