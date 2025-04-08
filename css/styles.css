@@ -360,3 +360,52 @@ body {
         height: 5px; /* Match reduced height */
     }
 }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #333;
+  color: white;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 1000; /* Ensure nav is above other elements */
+}
+
+nav.collapsed {
+  transform: translateX(-250px);
+}
+
+#nav-toggle {
+  position: fixed; /* Change to fixed to ensure visibility */
+  top: 10px;
+  left: 250px; /* Align with the edge of the nav bar */
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1100; /* Ensure button is above nav */
+  transition: left 0.3s ease; /* Smooth transition when nav collapses */
+}
+
+nav.collapsed + #nav-toggle {
+  left: 10px; /* Move button to the screen edge when nav is collapsed */
+}
+
+#nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-links li {
+  padding: 10px;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+}
