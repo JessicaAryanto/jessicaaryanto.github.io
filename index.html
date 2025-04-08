@@ -5,6 +5,12 @@
   <link rel="stylesheet" href="css/stars-css.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <style>
+    .bible-button {
+      position: relative; /* Ensure it is positioned relative to its container */
+      z-index: 10; /* Set a higher z-index to appear above the stars */
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -30,11 +36,23 @@
     </div>
   </div>
 
+  <div class="overlay-content">
+    <button class="bible-button">
+      <a href="read_bible.html">Read the Bible with me</a>
+    </button>
+  </div>
+
+
   <div class="contain-name">
     <pre class="myDescription"></pre>
   </div>
 
   <div class="stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
@@ -98,7 +116,8 @@
       "John 3:16 - For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
       "Yohanes 3:16 - Karena begitu besar kasih Allah akan dunia ini, sehingga Ia telah mengaruniakan Anak-Nya yang tunggal, supaya setiap orang yang percaya kepada-Nya tidak binasa, melainkan beroleh hidup yang kekal.",
       "1 Corinthians 13:4-7 - Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. Love does not delight in evil but rejoices with the truth. It always protects, always trusts, always hopes, always perseveres.",
-      "1 Korintus 13:4-7 - Kasih itu sabar, kasih itu murah hati; ia tidak cemburu, tidak memegahkan diri dan tidak sombong. Ia tidak melakukan yang tidak sopan, tidak mencari keuntungan diri sendiri, tidak mudah marah dan tidak menyimpan kesalahan orang lain. Ia tidak bersukacita karena ketidakadilan, tetapi bersukacita karena kebenaran. Ia menutupi segala sesuatu, percaya segala sesuatu, mengharapkan segala sesuatu, sabar menanggung segala sesuatu."
+      "1 Korintus 13:4-7 - Kasih itu sabar, kasih itu murah hati; ia tidak cemburu, tidak memegahkan diri dan tidak sombong. Ia tidak melakukan yang tidak sopan, tidak mencari keuntungan diri sendiri, tidak mudah marah dan tidak menyimpan kesalahan orang lain. Ia tidak bersukacita karena ketidakadilan, tetapi bersukacita karena kebenaran. Ia menutupi segala sesuatu, percaya segala sesuatu, mengharapkan segala sesuatu, sabar menanggung segala sesuatu.",
+      "this painting is inspired by the song 'How Great Thou Art' by Carl Boberg.",
     ];
     document.querySelector('.myDescription').textContent = sentences[Math.floor(Math.random() * sentences.length)];
   </script>

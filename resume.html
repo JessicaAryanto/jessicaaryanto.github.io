@@ -7,18 +7,70 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-  
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #333;
+      color: white;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      z-index: 1000; /* Ensure nav is above other elements */
+    }
+
+    nav.collapsed {
+      transform: translateX(-250px);
+    }
+
+    #nav-toggle {
+      position: fixed; /* Change to fixed to ensure visibility */
+      top: 10px;
+      left: 250px; /* Align with the edge of the nav bar */
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1100; /* Ensure button is above nav */
+      transition: left 0.3s ease; /* Smooth transition when nav collapses */
+    }
+
+    nav.collapsed + #nav-toggle {
+      left: 10px; /* Move button to the screen edge when nav is collapsed */
+    }
+
+    #nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #nav-links li {
+      padding: 10px;
+    }
+
+    #nav-links a {
+      color: white;
+      text-decoration: none;
+    }
   </style>
 </head>
 
 <body>
-  <nav>
-    <ul>
+  <nav id="navbar">
+    <ul id="nav-links">
       <li><a href="./index.html">Home</a></li>
       <li><a href="./resume.html">Resume</a></li>
       <li><a href="./music.html">Music</a></li>
+      <li><a href="./projects.html">Projects</a></li>
+      <li><a href="./art.html">Art</a></li>
     </ul>
   </nav>
+  <button id="nav-toggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
 
   <div class="container">
     <main>
@@ -122,6 +174,13 @@
         const content = button.nextElementSibling;
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
       });
+    });
+
+    // JavaScript for collapsible navigation bar
+    const navToggle = document.getElementById('nav-toggle');
+    const navbar = document.getElementById('navbar');
+    navToggle.addEventListener('click', () => {
+      navbar.classList.toggle('collapsed');
     });
   </script>
 </body>

@@ -298,3 +298,65 @@ body {
   width: 100px;
   height: auto;
 }
+
+/* Media query for screens smaller than 768px (mobile and tablets) */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align content */
+    }
+
+    nav {
+        position: static; /* Remove fixed positioning */
+        width: 100%; /* Full width */
+        text-align: center; /* Center navigation links */
+        box-shadow: none; /* Remove shadow */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack navigation links vertically */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between links */
+    }
+
+    .container {
+        margin: 0; /* Remove margin */
+        padding: 10px; /* Add padding */
+        width: 100%; /* Full width */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Reduce font size */
+    }
+
+    header p {
+        font-size: 0.9em; /* Reduce font size */
+    }
+
+    .collapsible {
+        font-size: 1em; /* Adjust font size for collapsible sections */
+    }
+
+    .content {
+        font-size: 0.9em; /* Adjust font size for content */
+    }
+
+    .tab_button {
+        top: 10px; /* Adjust position */
+        left: 10px; /* Adjust position */
+    }
+
+    .ham-menu {
+        width: 30px; /* Reduce size */
+        height: 5px; /* Reduce size */
+    }
+
+    .ham-menu::before, .ham-menu::after {
+        width: 30px; /* Match reduced width */
+        height: 5px; /* Match reduced height */
+    }
+}

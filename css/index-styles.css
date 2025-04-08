@@ -1,10 +1,10 @@
 .contain-name {
     position: absolute; /* Position it absolutely */
     top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
+    left: 70%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust for perfect centering */
     text-align: left; /* Keep left alignment */
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .myName {
@@ -153,7 +153,7 @@
   }
 
 body {
-    background-image: url('../images/background_photo.jpeg'); /* Replace with your image filename */
+    background-image: url('../images/how_great_our_God.JPG'); /* Replace with your image filename */
     background-size: cover; /* Ensure the image covers the entire background */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
@@ -167,4 +167,28 @@ body {
 pre {
     white-space: pre-wrap; /* Enable wrapping for long lines */
     word-wrap: break-word; /* Break words if necessary */
+}
+
+.bible-button {
+  font-size: 2rem; /* Increase font size */
+  padding: 10px 20px; /* Add padding for a larger button */
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50; /* Button background color */
+  color: white; /* Text color */
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.bible-button:hover {
+  transform: scale(1.1); /* Enlarge the button slightly on hover */
+}
+
+.bible-button a {
+  display: block; /* Make the entire button clickable */
+  text-decoration: none;
+  color: inherit; /* Inherit color from the button */
+  width: 100%; /* Ensure full width is clickable */
+  height: 100%; /* Ensure full height is clickable */
 }

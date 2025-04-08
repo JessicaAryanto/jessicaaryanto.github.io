@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 120%;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(40%, 0%);
 }
 
 .star {
@@ -23,7 +23,7 @@
   background: linear-gradient(45deg, currentColor, transparent);
   border-radius: 50%;
   filter: drop-shadow(0 0 6px currentColor);
-  transform: translate3d(104em, 0, 0);
+  transform: translate3d(110em, -10em, 0);
   animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
 }
 @media screen and (max-width: 750px) {
@@ -351,7 +351,7 @@
 
 @keyframes fall {
   to {
-    transform: translate3d(-30em, 0, 0);
+    transform: translate3d(-40em, 40em, 0);
   }
 }
 @keyframes tail-fade {
