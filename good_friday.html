@@ -87,7 +87,7 @@
     </style>
 </head>
 <body>
-    <nav id="navbar">
+    <nav id="navbar" class="collapsed">
         <ul id="nav-links">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./resume.html">Resume</a></li>
@@ -232,6 +232,17 @@
         <blockquote>Yohanes 3:16 Karena begitu besar kasih Allah akan dunia ini, sehingga Ia telah mengaruniakan Anak-Nya yang Tunggal, supaya setiap orang yang percaya kepada-Nya tidak binasa, melainkan beroleh hidup yang kekal.</blockquote>
     </div>
     <script>
+        // Collapse the navbar on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('navbar').classList.add('collapsed');
+        });
+
+        const navToggle = document.getElementById('nav-toggle');
+        const navbar = document.getElementById('navbar');
+        navToggle.addEventListener('click', () => {
+            navbar.classList.toggle('collapsed');
+        });
+
         // Show modal
         document.getElementById('yesaya43-popup-btn').addEventListener('click', function() {
             document.getElementById('yesaya43-modal').style.display = 'block';
@@ -265,12 +276,6 @@
         document.getElementById('modal-overlay').addEventListener('click', function() {
             document.getElementById('markus15-modal').style.display = 'none';
             document.getElementById('modal-overlay').style.display = 'none';
-        });
-
-        const navToggle = document.getElementById('nav-toggle');
-        const navbar = document.getElementById('navbar');
-        navToggle.addEventListener('click', () => {
-            navbar.classList.toggle('collapsed');
         });
     </script>
 </body>
